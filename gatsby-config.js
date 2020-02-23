@@ -37,17 +37,41 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-eslint',
+      resolve: "gatsby-plugin-eslint",
       options: {
         test: /\.ts$|\.tsx$/,
         exclude: /(node_modules|.cache|public)/,
-        stages: ['develop', 'build-javascript'],
+        stages: ["develop", "build-javascript"],
         options: {
           emitWarning: true,
-          failOnError: false
-        }
-      }
-    }
+          failOnError: false,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 690,
+              backgroundColor: `#f7f0eb`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-autolink-headers`,
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
