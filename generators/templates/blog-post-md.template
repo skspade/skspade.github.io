@@ -1,0 +1,7 @@
+---
+title: {{title}}
+createdDate: "{{createdDate}}"
+updatedDate: "{{createdDate}}"
+image: welcoming.png
+draft: {{draft}}
+---
