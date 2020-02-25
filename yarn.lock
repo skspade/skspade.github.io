@@ -11400,6 +11400,13 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-awesome-slider@^4.1.0:
+  version "4.1.0"
+  resolved "https://cngholdings.jfrog.io/cngholdings/api/npm/npm-virtual/react-awesome-slider/-/react-awesome-slider-4.1.0.tgz#6a800300cb3edd556d2388090f65ac731467639a"
+  integrity sha1-aoADAMs+3VVtI4gJD2WscxRnY5o=
+  dependencies:
+    web-animation-club "^0.6.0"
+
 react-dev-utils@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
@@ -14166,6 +14173,11 @@ wcwidth@^1.0.1:
   integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
   dependencies:
     defaults "^1.0.3"
+
+web-animation-club@^0.6.0:
+  version "0.6.0"
+  resolved "https://cngholdings.jfrog.io/cngholdings/api/npm/npm-virtual/web-animation-club/-/web-animation-club-0.6.0.tgz#c1dd79646b21e4265b5f95ae9cb8b93b73e05e47"
+  integrity sha1-wd15ZGsh5CZbX5WunLi5O3PgXkc=
 
 web-namespaces@^1.0.0, web-namespaces@^1.1.2:
   version "1.1.4"

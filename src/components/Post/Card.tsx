@@ -11,7 +11,7 @@ interface Props {
 }
 export const PostCard = (props: Props) => {
   return (
-    <div className="container max-w-md mx-auto mt-10">
+    <div className="container max-w-md mt-10">
       <div className="rounded overflow-hidden shadow-lg">
         {/*TODO Programmatically use the picture from the blog post as the card's picture*/}
         <img

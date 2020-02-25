@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react"
 import { Menu } from "../components/Header/Menu"
 
-function Index(): ReactElement {
+function Projects(): ReactElement {
   return (
     <>
       <div>
@@ -11,4 +11,4 @@ function Index(): ReactElement {
   )
 }
 
-export default Index
+export default Projects
