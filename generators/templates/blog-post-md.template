@@ -4,4 +4,6 @@ createdDate: "{{createdDate}}"
 updatedDate: "{{createdDate}}"
 image: welcoming.png
 draft: {{draft}}
+description: "{{description}}"
+tags: {{tags}}
 ---

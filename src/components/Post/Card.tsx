@@ -1,32 +1,33 @@
 import React from "react"
+import Tag from "./Tag"
+import { navigate } from "gatsby"
 
-export const PostCard = () => {
+interface Props {
+  path: string
+  title: string
+  description: string
+  createdDate: string
+  tags: string
+}
+export const PostCard = (props: Props) => {
   return (
     <div className="container max-w-md mx-auto mt-10">
       <div className="rounded overflow-hidden shadow-lg">
+        {/*TODO Programmatically use the picture from the blog post as the card's picture*/}
         <img
-          className="w-full"
+          className="w-full cursor-pointer"
           src="https://tailwindcss.com/img/card-top.jpg"
           alt="Sunset in the mountains"
+          onClick={() => navigate(props.path)}
         />
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-          <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
+          <div className="font-bold text-xl mb-2">{props.title}</div>
+          <p className="text-gray-700 text-base">{props.description}</p>
         </div>
         <div className="px-6 py-4">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-            #photography
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-            #travel
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-            #winter
-          </span>
+          {props.tags.split(",").map(tag => (
+            <Tag title={tag} />
+          ))}
         </div>
       </div>
     </div>

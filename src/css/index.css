@@ -1,5 +1,25 @@
 @tailwind base;
 
+
+h1 {
+    @apply text-2xl;
+    @apply my-2;
+}
+h2 {
+    @apply text-xl;
+    @apply my-2;
+}
+h3 {
+    @apply text-lg;
+    @apply my-2;
+}
+a {
+    @apply text-blue-600 underline;
+}
+p {
+    @apply mt-1;
+}
+
 @tailwind components;
 
 @tailwind utilities;
