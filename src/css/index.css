@@ -23,3 +23,11 @@ p {
 @tailwind components;
 
 @tailwind utilities;
+
+.triangle_right {
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-left: 140px solid #ff5a00;
+    border-bottom: 70px solid transparent;
+}

@@ -5,7 +5,7 @@ updatedDate: "2020-02-24"
 image: welcoming.png
 path: "/blog/generating-blog-posts-pt-1"
 draft: true
-tags: "tutorial, plop"
+tags: "tutorial,plop"
 description: "We will be utilizing a nice CLI utility called plop that will help keep our Markdown metadata consistent."
 ---
 

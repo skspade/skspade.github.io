@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Menu } from "../Header/Menu"
 
 const Content = ({ data }: Props) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
+    <div className="blog-post">
+      <Menu />
+      <div className="container mx-auto">
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.createdDate}</h2>
         <div

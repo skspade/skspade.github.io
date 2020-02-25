@@ -43,7 +43,7 @@ function Index(): ReactElement {
       <div>
         <Menu />
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-around">
         {nodes.map(post => {
           return <PostCard {...post.frontmatter} />
         })}
