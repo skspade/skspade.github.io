@@ -24,10 +24,17 @@ p {
 
 @tailwind utilities;
 
-.triangle_right {
+.triangle_right-sm {
     width: 0;
     height: 0;
-    border-top: 70px solid transparent;
+    border-top: 140px solid transparent;
     border-left: 140px solid #ff5a00;
-    border-bottom: 70px solid transparent;
+    border-bottom: 0px solid transparent;
+}
+.triangle_right-md {
+    width: 0;
+    height: 0;
+    border-top: 200px solid transparent;
+    border-left: 200px solid #0bff12;
+    border-bottom: 0px solid transparent;
 }
