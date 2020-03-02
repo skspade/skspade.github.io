@@ -15,8 +15,8 @@ Lets let the developers explain!
 
 > “a small tool that gives you a simple way to generate code or any other type of flat text files in a consistent way”
 
-It's a handy highly customizable CLI tool that allows you generate code based on functions and questions you configure.
-Basically you can set up a CLI form that you can fill out and it will generate code based on the functions you write.
+It's a handy highly customizable CLI tool that allows you to generate code based on functions and questions you configure.
+You can set up a CLI questionnaire that when you fill it out and it will generate code based on the functions you write.
 
 [Check it](https://github.com/plopjs/plop) out for yourself
 

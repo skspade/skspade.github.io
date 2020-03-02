@@ -9,8 +9,10 @@ const Content = ({ data }: Props) => {
     <div className="blog-post">
       <Menu />
       <div className="container mx-auto">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.createdDate}</h2>
+        <div className="mb-16">
+          <h1 className="text-3xl font-bold">{frontmatter.title}</h1>
+          <h2>{frontmatter.createdDate}</h2>
+        </div>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}

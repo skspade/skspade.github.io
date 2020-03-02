@@ -1,6 +1,6 @@
 import React from "react"
 import Tag from "./Tag"
-import { navigate } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 interface Props {
   path: string
