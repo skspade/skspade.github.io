@@ -130,4 +130,10 @@ Notice `this._validAuthStates`, Amplify uses `authState` to track the current au
 With `this._validAuthStates` we can determine which state is valid for this particular component.
 Amplify then uses this to only render the component when in these states.
 
+Things that still need to be written about
+
+1. If you do not require a username, how you map the email field to username.
+
+2. How to display error messages. (Wrong username/password)
+
 https://blog.kylegalbraith.com/2018/11/29/how-to-easily-customize-the-aws-amplify-authentication-ui/
