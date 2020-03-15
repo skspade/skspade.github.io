@@ -1,6 +1,6 @@
 import React from "react"
 import Tag from "./Tag"
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
 
 interface Props {
   path: string
@@ -8,6 +8,7 @@ interface Props {
   description: string
   createdDate: string
   tags: string
+  image?: string
 }
 export const PostCard = (props: Props) => {
   return (
@@ -16,7 +17,7 @@ export const PostCard = (props: Props) => {
         {/*TODO Programmatically use the picture from the blog post as the card's picture*/}
         <img
           className="w-full cursor-pointer"
-          src="https://tailwindcss.com/img/card-top.jpg"
+          src={props.image || "https://tailwindcss.com/img/card-top.jpg"}
           alt="Sunset in the mountains"
           onClick={() => navigate(props.path)}
         />

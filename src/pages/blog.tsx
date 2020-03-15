@@ -10,9 +10,19 @@ interface Query {
         frontmatter: {
           path: string
           title: string
+          draft: boolean
           createdDate: string
           description: string
           tags: string
+        }
+      }
+    ]
+  }
+  allImageSharp: {
+    nodes: [
+      {
+        original: {
+          src: string
         }
       }
     ]
@@ -22,16 +32,25 @@ interface Query {
 function Index(): ReactElement {
   const {
     allMarkdownRemark: { nodes },
+    allImageSharp,
   } = useStaticQuery<Query>(graphql`
     query AllPosts {
       allMarkdownRemark {
         nodes {
           frontmatter {
+            draft
             title
             description
             createdDate
             tags
             path
+          }
+        }
+      }
+      allImageSharp {
+        nodes {
+          original {
+            src
           }
         }
       }
@@ -44,8 +63,23 @@ function Index(): ReactElement {
         <Menu />
       </div>
       <div className="flex justify-around">
-        {nodes.map(post => {
-          return <PostCard {...post.frontmatter} />
+        {/* eslint-disable-next-line array-callback-return */}
+        {nodes.map((post, i) => {
+          const draft = post.frontmatter.draft
+
+          if (
+            (process.env.NODE_ENV === "production" && !draft) ||
+            process.env.NODE_ENV === "development"
+          )
+            return (
+              <PostCard
+                key={post.frontmatter.title}
+                image={
+                  allImageSharp.nodes[i] && allImageSharp.nodes[i].original.src
+                }
+                {...post.frontmatter}
+              />
+            )
         })}
       </div>
     </>
