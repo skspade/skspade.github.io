@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react"
-import { PostCard } from "../components/Post/Card"
+import { PostCard } from "../components/Card"
 import { graphql, useStaticQuery } from "gatsby"
 import { Menu } from "../components/Header/Menu"
 
