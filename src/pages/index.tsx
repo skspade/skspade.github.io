@@ -2,10 +2,11 @@ import React, { ReactElement } from "react"
 import { Menu } from "../components/Header/Menu"
 import { faReact } from "@fortawesome/free-brands-svg-icons/faReact"
 import { faAws } from "@fortawesome/free-brands-svg-icons/faAws"
-import { faTailwind } from "../images/tailwind"
+import { faTailwind } from "../images/customIcons"
 import Skill from "../components/About/Skill"
-import { faGithubAlt } from "@fortawesome/free-brands-svg-icons"
+import { faGithubAlt, faNodeJs } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
+import GraphqlLogo from "../images/GraphqlLogo"
 
 function Index(): ReactElement {
   return (
@@ -31,7 +32,8 @@ function Index(): ReactElement {
               <Skill text={"React"} icon={faReact} />
               <Skill text={"AWS"} icon={faAws} />
               <Skill text={"Tailwind"} icon={faTailwind} />
-              {/*<Skill text={"NodeJS"} icon={faNodeJs} />*/}
+              <Skill text={"NodeJS"} icon={faNodeJs} />
+              <Skill text={"GraphQL"} svg={<GraphqlLogo />} />
             </div>
           </div>
         </div>
@@ -41,8 +43,18 @@ function Index(): ReactElement {
           </div>
           <div className="container flex flex-col mx-auto mt-24">
             <div className="flex justify-around">
-              <Skill text={"Github"} icon={faGithubAlt} />
-              <Skill text={"Linkedin"} icon={faLinkedinIn} />
+              <Skill
+                className=""
+                text={"Github"}
+                icon={faGithubAlt}
+                url="https://github.com/skspade"
+              />
+              <Skill
+                className="cursor-pointer"
+                text={"Linkedin"}
+                icon={faLinkedinIn}
+                url="https://www.linkedin.com/in/skspade/"
+              />
             </div>
           </div>
         </div>

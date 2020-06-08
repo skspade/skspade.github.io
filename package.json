@@ -75,7 +75,8 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "generate": "plop --plopfile ./generators/plopfile.js",
-    "generate-build": "plop --plopfile ./generators/plopfile.js && gatsby build"
+    "generate-build": "plop --plopfile ./generators/plopfile.js && gatsby build",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
