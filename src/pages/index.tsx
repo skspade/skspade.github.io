@@ -8,7 +8,7 @@ import { faGithubAlt, faNodeJs } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
 import GraphqlLogo from "../images/GraphqlLogo"
 import Illustration from "../components/About/Illustration"
-
+//TODO Reformat the blog
 function Index(): ReactElement {
   return (
     <>
@@ -53,7 +53,7 @@ function Index(): ReactElement {
         </div>
         <div className="flex flex-col py-10">
           <div className="flex justify-center pt-5">
-            <h1 className="font-semibold">Here is some places I'm at</h1>
+            <h1 className="font-semibold">Find me here</h1>
           </div>
           <div className="container flex flex-col mx-auto mt-24">
             <div className="flex justify-around">
