@@ -1,0 +1,7 @@
+export { default as Afro } from "./Afro"
+export { default as Fear } from "./Fear"
+export { default as Happy } from "./Happy"
+export { default as Hectic } from "./Hectic"
+export { default as Rage } from "./Rage"
+export { default as Love } from "./Love"
+export { default as Suspicious } from "./Suspicious"

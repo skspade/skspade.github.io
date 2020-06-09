@@ -7,13 +7,15 @@ import Skill from "../components/About/Skill"
 import { faGithubAlt, faNodeJs } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
 import GraphqlLogo from "../images/GraphqlLogo"
+import Illustration from "../components/About/Illustration"
 
 function Index(): ReactElement {
   return (
     <>
       <Menu />
       <div className="h-screen">
-        <div className="container mx-auto flex flex-col mt-40 mb-20">
+        <div className="container mx-auto flex flex-col items-center mt-24 mb-20">
+          <Illustration />
           <h1 className="font-semibold text-center text-4xl">
             Hey, I'm Sean Spade
           </h1>
