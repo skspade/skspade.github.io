@@ -1,22 +1,22 @@
 ---
 title: Generating Blog Posts from Markdown Part 1
 createdDate: "2020-02-24"
-updatedDate: "2020-02-24"
-image: welcoming.png
+updatedDate: "2020-06-08"
+image: person-holding-piece-of-biscuit-with-milk-in-glass-3252138.jpeg
 path: "/blog/generating-blog-posts-pt-1"
-draft: true
+draft: false
 tags: "tutorial,plop"
 description: "We will be utilizing a nice CLI utility called plop that will help keep our Markdown metadata consistent."
 ---
 
-## WTH is plop?
+## 🚧 Caution: Unfinished Post 👷‍
 
-Lets let the developers explain!
+## WTH is plop?
 
 > “a small tool that gives you a simple way to generate code or any other type of flat text files in a consistent way”
 
-It's a handy highly customizable CLI tool that allows you to generate code based on functions and questions you configure.
-You can set up a CLI questionnaire that when you fill it out and it will generate code based on the functions you write.
+It's a handy highly customizable CLI tools that allows you to generate code based on functions and questions you configure.
+You can set up a CLI questionnaire that when you fill it out, and it will generate code based on the functions you write.
 
 [Check it](https://github.com/plopjs/plop) out for yourself
 
