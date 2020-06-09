@@ -11,7 +11,11 @@ interface Props {
 }
 
 const Skill = ({ text, icon, className, url, svg }: Props) => {
-  const combinedClass = ["flex flex-col w-1/3 p-8", className].join(" ")
+  const combinedClass = [
+    "flex flex-col w-1/3 p-8",
+    className,
+    url ? "cursor-pointer" : "",
+  ].join(" ")
   return (
     <div className={combinedClass}>
       {icon && (
@@ -19,11 +23,13 @@ const Skill = ({ text, icon, className, url, svg }: Props) => {
           onClick={() => (url ? window.open(url) : "")}
           fixedWidth
           icon={icon}
-          className="mx-auto"
-          size={"2x"}
+          className="mx-auto transition duration-500 transform hover:rotate-180"
+          size={"6x"}
         />
       )}
-      {svg}
+      <div className="transition duration-500 transform hover:rotate-180">
+        {svg}
+      </div>
       <div className="text-center">{text}</div>
     </div>
   )

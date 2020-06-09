@@ -18,7 +18,10 @@ const Illustration = ({}: Props) => {
   )
   console.log(currentIllustration)
   return (
-    <div onClick={() => setCurrent(illustrations[randomNumber])}>
+    <div
+      className="cursor-pointer"
+      onClick={() => setCurrent(illustrations[randomNumber])}
+    >
       {currentIllustration}
     </div>
   )

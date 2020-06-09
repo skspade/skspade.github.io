@@ -20,7 +20,7 @@ function Index(): ReactElement {
             Hey, I'm Sean Spade
           </h1>
           <p className="text-center text-lg mt-8">
-            I believe technology can empower people, by providing and unlocking
+            I believe technology can empower people. By providing and unlocking
             abilities that were not possible before on scales only limited by
             imagination.
           </p>
@@ -31,11 +31,23 @@ function Index(): ReactElement {
           </div>
           <div className="container flex flex-col mx-auto mt-16">
             <div className="flex flex-wrap justify-around ">
-              <Skill text={"React"} icon={faReact} />
-              <Skill text={"AWS"} icon={faAws} />
-              <Skill text={"Tailwind"} icon={faTailwind} />
-              <Skill text={"NodeJS"} icon={faNodeJs} />
-              <Skill text={"GraphQL"} svg={<GraphqlLogo />} />
+              <Skill text={"React"} icon={faReact} url="https://reactjs.org/" />
+              <Skill text={"AWS"} icon={faAws} url="https://aws.amazon.com/" />
+              <Skill
+                text={"Tailwind"}
+                icon={faTailwind}
+                url="https://tailwindcss.com/"
+              />
+              <Skill
+                text={"NodeJS"}
+                url="https://nodejs.org/en/"
+                icon={faNodeJs}
+              />
+              <Skill
+                text={"GraphQL"}
+                svg={<GraphqlLogo />}
+                url="https://graphql.org/"
+              />
             </div>
           </div>
         </div>
@@ -46,13 +58,11 @@ function Index(): ReactElement {
           <div className="container flex flex-col mx-auto mt-24">
             <div className="flex justify-around">
               <Skill
-                className=""
                 text={"Github"}
                 icon={faGithubAlt}
                 url="https://github.com/skspade"
               />
               <Skill
-                className="cursor-pointer"
                 text={"Linkedin"}
                 icon={faLinkedinIn}
                 url="https://www.linkedin.com/in/skspade/"
