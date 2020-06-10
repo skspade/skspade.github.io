@@ -9,8 +9,6 @@ tags: "tutorial,plop"
 description: "We will be utilizing a nice CLI utility called plop that will help keep our Markdown metadata consistent."
 ---
 
-## 🚧 Caution: Unfinished Post 👷‍
-
 ## WTH is plop?
 
 > “a small tool that gives you a simple way to generate code or any other type of flat text files in a consistent way”
@@ -92,7 +90,7 @@ module.exports = plop => {
       // Get current date
       data.createdDate = new Date().toISOString().split("T")[0]
 
-      // Parse tags as yaml array
+      // Parse tags from yaml array
       if (data.tags) {
         data.tags = `\ntags:\n  - ${data.tags.split(",").join("\n  - ")}`
       }
@@ -108,5 +106,28 @@ module.exports = plop => {
   })
 }
 ```
+
+## Step 6: Create your template
+
+The template files are a basic layout to insert the data into.  
+For example:
+
+---
+
+title: {{title}}
+createdDate: "{{createdDate}}"
+updatedDate: "{{createdDate}}"
+image: welcoming.png
+draft: {{draft}}
+description: "{{description}}"
+tags: {{tags}}
+
+---
+
+Remember those variables we created prompts for in Step 5? This is where they will be inserted into when the file is generated.
+
+That's it! That's all you need to get started generating files with plop.
+I find it extremely useful for things like creating a new markdown file for blog posts. It ensures that the data structure is consistent.
+Since Gatsby `remark` plugin parses this data out for the app to use.
 
 [REF](https://dev.to/ekafyi/adding-generators-to-your-gatsby-site-with-plop-2gd5)
