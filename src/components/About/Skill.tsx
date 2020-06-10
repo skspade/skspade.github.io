@@ -17,10 +17,12 @@ const Skill = ({ text, icon, className, url, svg }: Props) => {
     url ? "cursor-pointer" : "",
   ].join(" ")
   return (
-    <div className={combinedClass}>
+    <div
+      className={combinedClass}
+      onClick={() => (url ? window.open(url) : "")}
+    >
       {icon && (
         <FontAwesomeIcon
-          onClick={() => (url ? window.open(url) : "")}
           fixedWidth
           icon={icon}
           className="mx-auto transition duration-500 transform hover:rotate-180"

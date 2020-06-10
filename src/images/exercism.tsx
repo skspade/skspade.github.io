@@ -1,10 +1,8 @@
 import React from "react"
 
-const ExercismIcon = (
-  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-) => {
+const ExercismIcon = () => {
   return (
-    <svg width="124px" height="107px" viewBox="0 0 124 107" {...props}>
+    <svg width={84} height={84} viewBox="0 0 124 107" className="mx-auto">
       <g fill="#000" stroke="none" strokeWidth={1} fillRule="evenodd">
         <path
           d="M69.756 68.479c0 4.531-3.923 7.363-7.398 7.363-3.475 0-7.644-1.408-7.644-7.363v-2.897h-4.577v2.897c0 6.595 5.484 11.96 12.22 11.96 6.737 0 12.222-5.365 12.222-11.96v-2.897h-4.823v2.897zM31.31 54.492c0-4.327 3.754-7.846 8.365-7.846 4.608 0 8.36 3.522 8.36 7.846h5.27c0-7.056-6.112-12.793-13.63-12.793-7.519 0-13.633 5.737-13.633 12.793h5.269zM74.726 54.492c0-4.327 3.753-7.846 8.36-7.846 4.612 0 8.365 3.522 8.365 7.846h5.268c0-7.056-6.114-12.793-13.632-12.793-7.519 0-13.63 5.737-13.63 12.793h5.269z"

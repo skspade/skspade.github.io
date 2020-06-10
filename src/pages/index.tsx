@@ -8,6 +8,7 @@ import { faGithubAlt, faNodeJs } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
 import GraphqlLogo from "../images/GraphqlLogo"
 import Illustration from "../components/About/Illustration"
+import ExercismIcon from "../images/exercism"
 //TODO Reformat the blog
 function Index(): ReactElement {
   return (
@@ -66,6 +67,11 @@ function Index(): ReactElement {
                 text={"Linkedin"}
                 icon={faLinkedinIn}
                 url="https://www.linkedin.com/in/skspade/"
+              />
+              <Skill
+                text={"Exercism"}
+                svg={<ExercismIcon />}
+                url="https://exercism.io/profiles/skspade"
               />
             </div>
           </div>
