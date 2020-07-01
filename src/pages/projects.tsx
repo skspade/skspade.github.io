@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react"
 import { Menu } from "../components/Header/Menu"
 import { CardContainer, Card } from "../components/Card"
+import covidbits from "../images/covidbits.png"
 
 function Projects(): ReactElement {
   return (
@@ -13,6 +14,17 @@ function Projects(): ReactElement {
             "Holding companies accountable for their response to the COVID19 pandemic"
           }
           title={"CovidCo"}
+          tags="personal"
+          url={"https://github.com/skspade/covidco"}
+        />
+        <Card
+          createdDate={"2020-05-20"}
+          description={
+            "A site of filled with original and aggregated content regarding the COVID19 pandemic. "
+          }
+          title={"CovidBits"}
+          image={covidbits}
+          tags="volunteer"
           url={"https://github.com/skspade/covidco"}
         />
       </CardContainer>
