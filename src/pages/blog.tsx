@@ -1,7 +1,8 @@
 import React, { ReactElement } from "react"
-import { PostCard } from "../components/Card"
+import { PostCard } from "../components/Card/Card"
 import { graphql, useStaticQuery } from "gatsby"
 import { Menu } from "../components/Header/Menu"
+import { CardContainer } from "../components/Card"
 
 interface Query {
   allMarkdownRemark: {
@@ -62,7 +63,7 @@ function Index(): ReactElement {
       <div>
         <Menu />
       </div>
-      <div className="flex justify-around">
+      <CardContainer>
         {/* eslint-disable-next-line array-callback-return */}
         {nodes.map((post, i) => {
           const draft = post.frontmatter.draft
@@ -81,7 +82,7 @@ function Index(): ReactElement {
               />
             )
         })}
-      </div>
+      </CardContainer>
     </>
   )
 }

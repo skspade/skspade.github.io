@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Menu } from "../Header/Menu"
-
+//TODO Figure out how to transform MD list to HTML lists
 const Content = ({ data }: Props) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
