@@ -1,8 +1,7 @@
 import React, { ReactElement } from "react"
-import { PostCard } from "../components/Card/Card"
 import { graphql, useStaticQuery } from "gatsby"
 import { Menu } from "../components/Header/Menu"
-import { CardContainer } from "../components/Card"
+import { CardContainer, Card } from "../components/Card"
 
 interface Query {
   allMarkdownRemark: {
@@ -73,7 +72,7 @@ function Index(): ReactElement {
             process.env.NODE_ENV === "development"
           )
             return (
-              <PostCard
+              <Card
                 key={post.frontmatter.title}
                 image={
                   allImageSharp.nodes[i] && allImageSharp.nodes[i].original.src
