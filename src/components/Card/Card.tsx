@@ -1,6 +1,8 @@
 import React from "react"
 import Tag from "../Post/Tag"
 import { navigate } from "gatsby"
+import Img from "gatsby-image"
+import { Image } from "../../graphql/queries"
 
 interface Props {
   path?: string
@@ -9,32 +11,39 @@ interface Props {
   description: string
   createdDate: string
   tags?: string
-  image?: string
+  image?: Image | null
+  imageSrc?: string
 }
-//TODO Adjust so all images have the same height
 
-export const PostCard = (props: Props) => {
+export const PostCard = ({
+  description,
+  image,
+  path,
+  tags,
+  title,
+  url,
+}: Props) => {
   return (
     <div
       className="transform hover:scale-110 duration-150 cursor-pointer max-w-md mx-6"
       onClick={() => {
-        props.path ? navigate(props.path) : window.open(props.url)
+        path ? navigate(path) : window.open(url)
       }}
     >
       <div className="rounded overflow-hidden shadow-lg">
         <div className="overflow-hidden" style={{ height: "300px" }}>
-          <img
+          <Img
             className="w-full"
-            src={props.image || "https://tailwindcss.com/img/card-top.jpg"}
+            fluid={image?.childImageSharp?.fluid}
             alt="Sunset in the mountains"
           />
         </div>
         <div className="px-6 py-4 h-40">
-          <div className="font-bold text-xl mb-2">{props.title}</div>
-          <p className="text-gray-700 text-base">{props.description}</p>
+          <div className="font-bold text-xl mb-2">{title}</div>
+          <p className="text-gray-700 text-base">{description}</p>
         </div>
         <div className="px-6 py-4">
-          {props.tags && props.tags.split(",").map(tag => <Tag title={tag} />)}
+          {tags && tags.split(",").map((tag) => <Tag title={tag} />)}
         </div>
       </div>
     </div>

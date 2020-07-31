@@ -2,7 +2,7 @@
 title: Generating Blog Posts from Markdown Part 1
 createdDate: "2020-02-24"
 updatedDate: "2020-06-08"
-image: person-holding-piece-of-biscuit-with-milk-in-glass-3252138.jpeg
+image: person-holding-piece-of-biscuit.jpg
 path: "/blog/generating-blog-posts-pt-1"
 draft: false
 tags: "tutorial,plop"
@@ -54,7 +54,7 @@ yarn add plop
 This is the "entry" file. This loads up all your generators.
 
 ```js
-module.exports = plop => {
+module.exports = (plop) => {
   plop.load("./blog-post-generator.js")
 }
 ```
@@ -66,7 +66,7 @@ module.exports = plop => {
 ```js
 const { inputRequired } = require("./util")
 
-module.exports = plop => {
+module.exports = (plop) => {
   plop.setGenerator("blog post", {
     prompts: [
       {
@@ -86,7 +86,7 @@ module.exports = plop => {
         message: "Is it a draft?",
       },
     ],
-    actions: data => {
+    actions: (data) => {
       // Get current date
       data.createdDate = new Date().toISOString().split("T")[0]
 

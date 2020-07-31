@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Typescript Tailwind`,
@@ -10,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     "gatsby-plugin-postcss",
@@ -61,25 +63,5 @@ module.exports = {
         plugins: ["gatsby-remark-prismjs"],
       },
     },
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [
-    //       {
-    //         resolve: `gatsby-remark-images`,
-    //         options: {
-    //           maxWidth: 690,
-    //           backgroundColor: `#f7f0eb`,
-    //         },
-    //       },
-    //       // `gatsby-remark-prismjs`,
-    //       `gatsby-remark-copy-linked-files`,
-    //       // `gatsby-remark-autolink-headers`,
-    //     ],
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

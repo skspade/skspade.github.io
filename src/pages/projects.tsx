@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react"
 import { Menu } from "../components/Header/Menu"
 import { CardContainer, Card } from "../components/Card"
-import covidbits from "../images/covidbits.png"
+import Covidbits from "../images/covidbits.png"
 
 function Projects(): ReactElement {
   return (
@@ -23,9 +23,9 @@ function Projects(): ReactElement {
             "A site of filled with original and aggregated content regarding the COVID19 pandemic. "
           }
           title={"CovidBits"}
-          image={covidbits}
+          image={Covidbits}
           tags="volunteer"
-          url={"https://github.com/skspade/covidco"}
+          url={""}
         />
       </CardContainer>
     </>
